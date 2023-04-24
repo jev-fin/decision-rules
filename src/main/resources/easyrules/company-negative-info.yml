@@ -1,0 +1,6 @@
+name: "Requested amount"
+description: "If company has negative info, then COMPANY_HAS_NEGATIVE_INFO"
+priority: 1
+condition: "application.requestedAmount().doubleValue() > 5000"
+actions:
+  - "violations.add(\"COMPANY_HAS_NEGATIVE_INFO\");"

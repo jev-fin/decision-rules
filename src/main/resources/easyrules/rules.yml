@@ -1,0 +1,49 @@
+---
+name: "Company has negative info"
+description: "If company has negative info, then COMPANY_HAS_NEGATIVE_INFO"
+#  priority: 1
+condition: "applicationData.companyHasNegativeInfo()"
+actions:
+  - "violations.add(\"COMPANY_HAS_NEGATIVE_INFO\");"
+---
+name: "Requested amount"
+description: "If requested amount is more than 5000 EUR, then APPLICATION_AMOUNT_EXCEEDED"
+#  priority: 1
+condition: "applicationData.requestedAmount().doubleValue() > 5000.0"
+actions:
+  - "violations.add(\"APPLICATION_AMOUNT_EXCEEDED\");"
+---
+name: "Total expected exposures"
+description: "Current exposure in SMEF and SMEB including current application exceeds EUR 50 000"
+#  priority: 1
+condition: "applicationData.totalExpectedExposures().doubleValue() > 50000"
+actions:
+  - "violations.add(\"TOTAL_EXPECTED_EXPOSURES_EXCEEDED\");"
+---
+name: "Young company"
+description: "Applicant's registration date is later than 1 year ago"
+#  priority: 1
+condition: "registryData.companiesAgeInMonths() == null || registryData.companiesAgeInMonths() < 12"
+actions:
+  - "violations.add(\"YOUNG_COMPANY\");"
+---
+name: "Management changed"
+description: "Changes in Management/ shareholders within last 6 months"
+#  priority: 1
+condition: "registryData.managerNotChangedInMonths() == null || registryData.managerNotChangedInMonths() < 6"
+actions:
+  - "violations.add(\"MANAGEMENT_CHANGED\");"
+---
+name: "Company not active"
+description: "Changes in Management/ shareholders within last 6 months"
+#  priority: 1
+condition: "registryData.companyActive() == false"
+actions:
+  - "violations.add(\"COMPANY_NOT_ACTIVE\");"
+---
+name: "Company not active and not CREDIT_LINE"
+description: "Changes in Management/ shareholders within last 6 months"
+#  priority: 1
+condition: "registryData.companyActive() == false && applicationData.productType() != \"CREDIT_LINE\""
+actions:
+  - "violations.add(\"PRODUCT_TYPE\");"

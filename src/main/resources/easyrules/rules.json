@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Company has negative info",
+    "description": "If requested amount is more than 5000 EUR, then APPLICATION_AMOUNT_EXCEEDED",
+    "priority": 1,
+    "condition": "applicationData.companyHasNegativeInfo()",
+    "actions": [
+      "violations.add(\"APPLICATION_AMOUNT_EXCEEDED\");"
+    ]
+  },
+  {
+    "name": "Requested amount",
+    "description": "If company has negative info, then COMPANY_HAS_NEGATIVE_INFO",
+    "priority": 1,
+    "condition": "applicationData.requestedAmount().doubleValue() > 5000",
+    "actions": [
+      "violations.add(\"COMPANY_HAS_NEGATIVE_INFO\");"
+    ]
+  },
+  {
+    "name": "Total expected exposures",
+    "description": "If total expected exposures is greater than 1000, then TOTAL_EXPECTED_EXPOSURES_EXCEEDED",
+    "priority": 1,
+    "condition": "applicationData.totalExpectedExposures().doubleValue() > 50000",
+    "actions": [
+      "violations.add(\"TOTAL_EXPECTED_EXPOSURES_EXCEEDED\");"
+    ]
+  }
+]
