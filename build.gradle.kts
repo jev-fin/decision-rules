@@ -16,6 +16,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.jeasy:easy-rules-core:4.1.0")
 	implementation("org.jeasy:easy-rules-mvel:4.1.0")
+
+	implementation("com.deliveredtechnologies:rulebook-core:0.12")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

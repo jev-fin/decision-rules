@@ -3,6 +3,7 @@ package org.company.decisionrules;
 import org.company.decisionrules.model.ApplicationData;
 import org.company.decisionrules.model.RegistryData;
 import org.company.decisionrules.easyrules.EasyRulesDecision;
+import org.company.decisionrules.rulebook.RuleBookDecision;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -40,5 +41,16 @@ class DecisionTest {
     void EasyRulesDecisionDeclarativeJSONTest() throws Exception {
         var decisionEngine = new EasyRulesDecision();
         assertEquals(3, decisionEngine.decisionDeclarativeJSON(applicationData, registryData, violations).size());
+    }
+
+    @Test
+    void RuleBookDecisionTest() {
+        var decisionEngine = new RuleBookDecision();
+        assertEquals(5, decisionEngine.decisionJava(applicationData, registryData, violations).size());
+    }
+    @Test
+    void RuleBookDecisionPOJOTest() {
+        var decisionEngine = new RuleBookDecision();
+        assertEquals(3, decisionEngine.decisionPOJO(applicationData, registryData, violations).size());
     }
 }
