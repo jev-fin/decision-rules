@@ -49,3 +49,24 @@ Maven repository: https://mvnrepository.com/artifact/com.deliveredtechnologies/r
 
 * Could write rules in POJO and boilerplate code reduced
 * Good readability of rules in POJO implementation
+
+### Evrete
+
+References:
+
+* https://www.baeldung.com/java-evrete-rule-engine
+* https://www.evrete.org
+
+Git repository: https://github.com/evrete/evrete/
+Maven repository: https://mvnrepository.com/artifact/org.evrete/evrete-core
+
+#### Cons
+
+* not readable inline implementation for many rules
+
+#### Pros
+
+* Possibility collect rules in sets
+* Rules written in ruleset easy to read and modify
+* Active support latest commit 2023
+* Last version released 2023 april
