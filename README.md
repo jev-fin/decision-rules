@@ -10,7 +10,9 @@ present results in a simple way.
 ### Easy Rules
 
 Link to description: https://www.baeldung.com/java-rule-engines#easy-rules
+
 GitHub: https://github.com/j-easy/easy-rules
+Maven repository: https://mvnrepository.com/artifact/org.jeasy/easy-rules-core
 
 #### Cons
 
@@ -19,6 +21,7 @@ GitHub: https://github.com/j-easy/easy-rules
   Version
   4.1.x is the only supported version. Please consider upgrading to this version at your earliest convenience.
 * this framework doesn’t implement the JSR94 standard
+* last version released 2020 December
 
 #### Pros
 
