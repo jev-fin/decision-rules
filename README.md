@@ -10,8 +10,11 @@ present results in a simple way.
 ### Easy Rules
 
 Link to description: https://www.baeldung.com/java-rule-engines#easy-rules
+https://www.jeasy.org
+
 
 GitHub: https://github.com/j-easy/easy-rules
+
 Maven repository: https://mvnrepository.com/artifact/org.jeasy/easy-rules-core
 
 #### Cons
@@ -39,6 +42,7 @@ References:
 * https://dzone.com/articles/rulebook-a-simple-rules-engine-that-leverages-java
 
 Git repository: https://github.com/deliveredtechnologies/rulebook
+
 Maven repository: https://mvnrepository.com/artifact/com.deliveredtechnologies/rulebook-core
 
 #### Con
@@ -61,6 +65,7 @@ References:
 * https://www.evrete.org
 
 Git repository: https://github.com/evrete/evrete/
+
 Maven repository: https://mvnrepository.com/artifact/org.evrete/evrete-core
 
 #### Cons
