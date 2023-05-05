@@ -1,7 +1,7 @@
 package org.company.decisionrules;
 
 import java.io.IOException;
-import org.company.decisionrules.everete.EveretDecision;
+import org.company.decisionrules.everete.EvretDecision;
 import org.company.decisionrules.model.ApplicationData;
 import org.company.decisionrules.model.RegistryData;
 import org.company.decisionrules.easyrules.EasyRulesDecision;
@@ -57,14 +57,14 @@ class DecisionTest {
     }
 
     @Test
-    void EveretDecisionTest() {
-        var decisionEngine = new EveretDecision();
+    void EvreteDecisionTest() {
+        var decisionEngine = new EvretDecision();
         assertEquals(5, decisionEngine.decision(applicationData, registryData, violations).size());
     }
 
     @Test
-    void EveretDecisionAnnotedTest() throws IOException {
-        var decisionEngine = new EveretDecision();
+    void EvreteDecisionAnnotatedTest() throws IOException {
+        var decisionEngine = new EvretDecision();
         assertEquals(5, decisionEngine.decisionAnnotated(applicationData, registryData, violations).size());
     }
 }

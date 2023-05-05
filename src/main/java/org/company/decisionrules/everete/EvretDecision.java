@@ -9,7 +9,7 @@ import org.evrete.KnowledgeService;
 import org.evrete.api.Knowledge;
 import org.evrete.api.StatelessSession;
 
-public class EveretDecision {
+public class EvretDecision {
     public List<String> decisionAnnotated(
         ApplicationData applicationData,
         RegistryData registryData,
