@@ -22,8 +22,8 @@ public class RuleBookDecision {
         facts.setValue(VIOLATIONS, violations);
 
         RuleBook decisionRuleBook = RuleBookBuilder.create(DecisionRuleBook.class)
-                .withResultType(List.class)
-                .withDefaultResult(new ArrayList<>())
+//                .withResultType(List.class)
+//                .withDefaultResult(new ArrayList<>())
                 .build();
         decisionRuleBook.run(facts);
         decisionRuleBook.getResult();
@@ -37,9 +37,9 @@ public class RuleBookDecision {
         facts.setValue(VIOLATIONS, violations);
 
         RuleBookRunner decisionRuleBook = new RuleBookRunner("org.company.decisionrules.rulebook.rules");
-        decisionRuleBook.setDefaultResult(List.class);
+//        decisionRuleBook.setDefaultResult(List.class);
         decisionRuleBook.run(facts);
-        decisionRuleBook.getResult();
+//        decisionRuleBook.getResult();
         return violations;
     }
 }

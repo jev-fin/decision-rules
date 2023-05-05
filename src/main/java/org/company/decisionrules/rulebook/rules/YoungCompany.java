@@ -22,7 +22,8 @@ public class YoungCompany {
 
     @When
     public boolean when() {
-        return registryData.companiesAgeInMonths() < 12;
+        return registryData.companiesAgeInMonths() == null || registryData.companiesAgeInMonths() < 12;
+//        return registryData.companiesAgeInMonths() < 12;
     }
 
     @Then

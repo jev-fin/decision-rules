@@ -53,7 +53,7 @@ class DecisionTest {
     @Test
     void RuleBookDecisionPOJOTest() {
         var decisionEngine = new RuleBookDecision();
-        assertEquals(3, decisionEngine.decisionPOJO(applicationData, registryData, violations).size());
+        assertEquals(4, decisionEngine.decisionPOJO(applicationData, registryData, violations).size());
     }
 
     @Test
